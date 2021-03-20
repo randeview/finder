@@ -13,6 +13,7 @@ services:
       - "5433:5432"
   web:
     build: .
+    command: python manage.py migrate
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
@@ -21,3 +22,10 @@ services:
     depends_on:
       - db
 
+networks:
+  masternet:
+    external: true
+  app: { }
+  db: { }
+  cache: { }
+  chrome: { }

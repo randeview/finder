@@ -1,3 +1,4 @@
+
 """
 Django settings for oin_sauk project.
 
@@ -81,7 +82,7 @@ DATABASES = {
         'NAME': 'gis',
         'USER': 'django',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432'
     }
 }
